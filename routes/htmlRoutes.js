@@ -27,7 +27,7 @@ module.exports = function(app) {
   //   });
   // });
 
-  app.get("/", isAuthenticated, function(req, res) {
+  app.get("/", isAuthenticated, (req, res) => {
     res.sendFile(path.join(__dirname, "../public/index.html"));
   });
 
