@@ -1,8 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "nori",
-    "database": "exampledb",
+    "database": "coffee_db",
     "host": "localhost",
     "dialect": "mysql"
   },
