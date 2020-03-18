@@ -10,7 +10,7 @@ CREATE TABLE light (
 id INT NOT NULL AUTO_INCREMENT,
 title VARCHAR(45) NOT NULL,
 priceperoz int default 0,
-origin, VARCHAR(45) NOT NULL,
+origin VARCHAR(45) NOT NULL,
 PRIMARY KEY (id)
 );
 
@@ -21,7 +21,7 @@ CREATE TABLE medium (
 id INT NOT NULL AUTO_INCREMENT,
 title VARCHAR(45) NOT NULL,
 priceperoz int default 0,
-origin, VARCHAR(45) NOT NULL,
+origin VARCHAR(45) NOT NULL,
 PRIMARY KEY (id)
 );
 
@@ -32,7 +32,7 @@ CREATE TABLE dark (
 id INT NOT NULL AUTO_INCREMENT,
 title VARCHAR(45) NOT NULL,
 priceperoz int default 0,
-origin, VARCHAR(45) NOT NULL,
+origin VARCHAR(45) NOT NULL,
 PRIMARY KEY (id)
 );
 
