@@ -6,9 +6,11 @@ const isAuthenticated = require("../config/middleware/isAuthenticated");
 module.exports = function(app) {
   // Load Home page
   app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/index.html"));
+    res.render("index");
+    // res.sendFile(path.join(__dirname, "../public/index.html"));
   });
 
+  //Returns the user if they are not logged in
   app.get("/", isAuthenticated, (req, res) => {
     res.sendFile(path.join(__dirname, "../public/index.html"));
   });
