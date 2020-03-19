@@ -33,6 +33,7 @@
 <body>
 
     <main class="container-fluid">
+
         {{!-- NAVBAR --}}
         <div class="navbar-fixed navClass">
         <nav>
@@ -45,7 +46,7 @@
                 </a>
 
                 {{!-- MOBILE MENU ICON --}}
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <a href="#" data-target="mobile-side" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
             <ul class="right menu-items hide-on-med-and-down">
 
@@ -59,10 +60,10 @@
                 <li><a href="#" class="menu-link contact">
                     CONTACT US
                 </a></li>
-                <li><a href="#" class="menu-link account">
+                <li><a href="#modal-account" class="modal-trigger menu-link account">
                     <i class="material-icons cart">account_box</i>
                 </a></li>
-                <li><a href="#" class="menu-link cart">
+                <li><a href="#modal-cart" class="modal-trigger menu-link cart">
                     <i class="material-icons cart">shopping_cart</i>
                 </a></li>
 
@@ -72,21 +73,24 @@
         </div>
 
             {{!-- MOBILE MENU --}}
-            <ul class="sidenav" id="mobile-demo"><br>
+            <ul class="sidenav" id="mobile-side"><br>
             <i class="material-icons">menu</i></a>
 
                 </a></li>
-                <li><a href="#" class="menu-link beans">
+                <li><a href="#" class="menu-link-side beans">
                     OUR BEANS
                 </a></li>
-                <li><a href="#" class="menu-link mission">
+                <li><a href="#" class="menu-link-side mission">
                     OUR MISSION</a>
                 </li>
-                <li><a href="#" class="menu-link contact">
+                <li><a href="#" class="menu-link-side contact">
                     CONTACT US
                 </a></li>
-                <li><a href="#" class="menu-link cart">
-                    <i class="material-icons cart">shopping_cart</i>
+                <li><a href="#modal-account" class="modal-trigger menu-link-side account">
+                    ACCOUNT
+                </a></li>
+                <li><a href="#modal-cart" class="modal-trigger menu-link-side cart">
+                    CART
                 </a></li>
 
             </ul>   
@@ -94,12 +98,56 @@
         </nav>
         </div>
         
-
         {{!-- BODY --}}
 
         {{{body}}}
         
     </main>
+
+    <div id="modal-account" class="modal">
+        <div class="isamember modal-content">
+            <h3><b>CUSTOMER LOG IN</b></h3>
+            <div class="col s12 formclass container row loginsignup z-depth-3">
+                <form class="row col s12 login-form">
+                    <div class="row input-field col s12">
+                        <input id="login-username" type="text" class="validate">
+                        <label for="login-username">Username</label>
+                    </div>
+                    <br>
+                    <div class="row input-field col s12">
+                        <input id="login-password" type="text" class="validate">
+                        <label for="login-password">Password</label>
+                    </div>
+                    <br>
+                    <button class="submit waves-effect waves-light btn" id="login-account">LOG IN</a>
+                </form>
+            </div>
+            <br>
+            <div class="notamember">
+                <b>Not a member yet?</b>
+            </div>
+            <div class="row submitrow">
+                <button class="submit waves-effect waves-light btn" id="signup-button">
+                    CREATE ACCOUNT
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-cart" class="modal">
+        <div class="modal-content">
+            <h3>Your Cart</h3>
+            <hr>
+            <br>
+            <div class="kaffe"></div>
+            <br>
+            <div class="row submitrow">
+                <button class="submit waves-effect waves-light btn" id="cart-checkout">
+                    CHECKOUT
+                </button>
+            </div>
+        </div>
+    </div>
 
     <div class="sFooter">
         <br><br><br><br>
