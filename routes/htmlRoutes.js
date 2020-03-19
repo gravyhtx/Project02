@@ -6,7 +6,8 @@ const isAuthenticated = require("../config/middleware/isAuthenticated");
 module.exports = function(app) {
   // Load Home page
   app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/name.html"));
+    res.render("index", {test: "Robin"});
+    // res.sendFile(path.join(__dirname, "../public/index"));
   });
 
 
@@ -27,9 +28,9 @@ module.exports = function(app) {
   //   });
   // });
 
-  app.get("/", isAuthenticated, function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/index.html"));
-  });
+  // app.get("/", isAuthenticated, function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../public/index.html"));
+  // });
 
 
   // Render 404 page for any unmatched routes
