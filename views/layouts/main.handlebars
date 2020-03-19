@@ -20,6 +20,9 @@
 
     {{!-- Animate.CSS --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+    {{!-- GOOGLE FONTS --}}
+    <link href="https://fonts.googleapis.com/css?family=Sen|Open+Sans|Spartan|Sacramento|&display=swap" rel="stylesheet">
     
     {{!-- PRODUCT SANS --}}
     <link href="../../public/fonts/ProductSans-Thin.ttf">
@@ -41,7 +44,7 @@
             <div class="container-fluid left-logo col-12">
 
                 {{!-- LOGIN --}}
-                <a href="#" class="menu-link login">
+                <a href="#" class="menu-link logo-side">
                     <img class="centerlogo" src="images/jc_logo_white.svg">
                 </a>
 
@@ -119,7 +122,9 @@
                         <label for="login-password">Password</label>
                     </div>
                     <br>
-                    <button class="submit waves-effect waves-light btn" id="login-account">LOG IN</a>
+                    <a href="/members" class="submit waves-effect waves-light btn" id="login-account">
+                        LOG IN
+                    </a>
                 </form>
             </div>
             <br>
@@ -127,9 +132,9 @@
                 <b>Not a member yet?</b>
             </div>
             <div class="row submitrow">
-                <button class="submit waves-effect waves-light btn" id="signup-button">
+                <a href="/signup" class="submit waves-effect waves-light btn" id="signup-button">
                     CREATE ACCOUNT
-                </button>
+                </a>
             </div>
         </div>
     </div>
