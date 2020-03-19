@@ -102,13 +102,14 @@
 $(document).ready(function () {
 
   //Consistent point of reference for id and classes within the handlebars files.
-  const loginForm = $("form#login");
-  const signUpForm = $("form#signUp");
-  const emailInput = $("input#email");
-  const passInput = $("input#password");
-  const firstInput = $("input#first_name");
-  const lastInput = $("input#last_name");
-  const userInput = $("input#user_name");
+  const loginForm = $("#login");
+  const signUpForm = $("#signUp");
+  const signUpBtn = $("#signup-button")
+  const emailInput = $("#email");
+  const passInput = $("#password");
+  const firstInput = $("#first_name");
+  const lastInput = $("#last_name");
+  const userInput = $("#user_name");
 
   //Validate that an email and password have been entered
   loginForm.on("submit", (event) => {
@@ -146,6 +147,9 @@ $(document).ready(function () {
   signUpForm.on("submit", (event) => {
     event.preventDefault();
     const userInfo = {
+      firstName:firstInput.val().trim(),
+      lastName:lastInput.val().trim(),
+      username: userInput.val().trim(),
       email: emailInput.val().trim(),
       password: passInput.val().trim()
     };
@@ -174,4 +178,6 @@ $(document).ready(function () {
     $("#alert .msg").text(err.responseJSON);
     $("#alert").fadeIn(500);
   }
+
+  $signUpBtn.on("click", userSignUp);
 })
