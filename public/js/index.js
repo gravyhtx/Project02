@@ -104,8 +104,11 @@ $(document).ready(function () {
   //Consistent point of reference for id and classes within the handlebars files.
   const loginForm = $("form#login");
   const signUpForm = $("form#signUp");
-  const emailInput = $("form#email");
-  const passInput = $("form#password");
+  const emailInput = $("input#email");
+  const passInput = $("input#password");
+  const firstInput = $("input#first_name");
+  const lastInput = $("input#last_name");
+  const userInput = $("input#user_name");
 
   //Validate that an email and password have been entered
   loginForm.on("submit", (event) => {
@@ -139,7 +142,7 @@ $(document).ready(function () {
         console.log(err);
       });
   }
-
+  //Section begins the signup Portion of the JS
   signUpForm.on("submit", (event) => {
     event.preventDefault();
     const userInfo = {
@@ -157,6 +160,7 @@ $(document).ready(function () {
 
   function userSignUp(email, password) {
     $.post("/", {
+
         email: email,
         password: password
       })
