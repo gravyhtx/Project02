@@ -32,7 +32,7 @@ body {
     background-size: cover;
     scroll-behavior: smooth;
     cursor: default;
-    font-family: "Product Sans";
+    font-family: "Product Sans", "Open Sans";
     font-size: 20px;
     /* text-align: center; */
 }
@@ -72,10 +72,6 @@ a:hover {
     background-color: rgb(52, 122, 64);
 }
 
-/* .navClass {
-    background-color: rgba(0, 0, 0, 0);
-} */
-
 .navcolor {
     background-color: #326832;
 }
@@ -93,12 +89,13 @@ a:hover {
     margin-right: 10px;
 }
 
-.login {
+.logo-side {
     margin-left: 30px;
+    margin: 30px !important;
     background-color: rgba(0, 0, 0, 0) !important;
 }
 
-.login:hover {
+.logo-side:hover {
     font-size: 20px !important;
 }
 
@@ -106,7 +103,6 @@ a:hover {
     width: 150px;
     margin-top: 10px;
 }
-
 
 /* BODY STYLES */
 
@@ -193,6 +189,10 @@ a:hover {
 
 .notamember, .isamember {
     margin-bottom: 20px;
+}
+
+.isamember {
+    margin-top: 20px;
 }
 
 
