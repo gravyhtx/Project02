@@ -1,11 +1,11 @@
 // Get references to page elements
-var $exampleText = $("#example-text");
-var $exampleDescription = $("#example-description");
-var $submitBtn = $("#submit");
-var $exampleList = $("#example-list");
+const $exampleText = $("#example-text");
+const $exampleDescription = $("#example-description");
+const $submitBtn = $("#submit");
+const $exampleList = $("#example-list");
 
 // The API object contains methods for each kind of request we'll make
-var API = {
+const API = {
   saveExample: function(example) {
     return $.ajax({
       headers: {
