@@ -25,7 +25,8 @@
 
 /* DOCUMENT STYLES */
 
-html,body {
+html,
+body {
     margin: 0 auto;
     background-color: rgb(240, 228, 215);
     background-size: cover;
@@ -42,11 +43,6 @@ a:hover {
 
 .body {
     text-align: center;
-}
-
-hr {
-    height: .1px;
-    border: solid rgb(202, 202, 202);
 }
 
 .center {
@@ -67,6 +63,12 @@ hr {
 .menu-link:hover {
     /* text-decoration: underline; */
     text-shadow: rgb(13, 36, 17) 3px 2px;
+    background-color: rgb(52, 122, 64);
+}
+
+.menu-link-side:hover {
+    /* text-decoration: underline; */
+    text-shadow: rgb(219, 219, 219) 1px 1px;
     background-color: rgb(52, 122, 64);
 }
 
@@ -177,6 +179,20 @@ hr {
 
 .submit {
     background-color: #296e29 !important;
+}
+
+#modal-account,
+#modal-cart {
+    background-color: rgb(245, 242, 238);
+    padding: 15px;
+    border: 3px solid gray;
+    border-radius: 20px;
+    text-align: center;
+    overflow: scroll;
+}
+
+.notamember, .isamember {
+    margin-bottom: 20px;
 }
 
 
