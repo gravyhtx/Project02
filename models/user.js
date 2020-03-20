@@ -13,11 +13,11 @@ module.exports = function(sequelize, DataTypes) {
                 isEmail:true
             }
         },
-        username: {
-            type: DataTypes.STRING,
-            allowNull: true,
-            unique: true
-        },
+        // username: {
+        //     type: DataTypes.STRING,
+        //     allowNull: true,
+        //     unique: true
+        // },
         password: {
             type: DataTypes.STRING,
             allowNull:false,
@@ -25,36 +25,36 @@ module.exports = function(sequelize, DataTypes) {
                 len: [4]
               }
         },
-        first_name: {
-            type: DataTypes.STRING,
-            allowNull: false,
+        // first_name: {
+        //     type: DataTypes.STRING,
+        //     allowNull: false,
 
-        },
-        last_name:{
-            type: DataTypes.STRING,
-            allowNull: false,
+        // },
+        // last_name:{
+        //     type: DataTypes.STRING,
+        //     allowNull: false,
 
-        },
-        street_address: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        unit:{
-            type: DataTypes.STRING,
-            allowNull: true
-        },
-        zip_code: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-        city_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false
-        },
-        country_id:{
-            type: DataTypes.INTEGER,
-            allowNull: false
-        }
+        // },
+        // street_address: {
+        //     type: DataTypes.STRING,
+        //     allowNull: false,
+        // },
+        // unit:{
+        //     type: DataTypes.STRING,
+        //     allowNull: true
+        // },
+        // zip_code: {
+        //     type: DataTypes.STRING,
+        //     allowNull: false
+        // },
+        // city_id: {
+        //     type: DataTypes.INTEGER,
+        //     allowNull: false
+        // },
+        // country_id:{
+        //     type: DataTypes.INTEGER,
+        //     allowNull: false
+        // }
        
     });
     // Creating a method that will check if the unhashed password  can be created to a previously created password
@@ -65,6 +65,7 @@ module.exports = function(sequelize, DataTypes) {
     User.addHook("beforeCreate", function(user) {
         user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
     });
+    console.log(User);
     return User;
 };
 
