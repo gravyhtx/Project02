@@ -1,33 +1,145 @@
-<div id="home">
-  <div class="container">
-    <div class="row">
-      <div class="col-8 offset-2">
-        <h1>{{msg}}</h1>
-        <h2>This is our Home Page!</h2>
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="example-text">Example Text</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
-          </div>
-          <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
-          </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
-        </form>
-        <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
-      </div>
-    </div>
-  </div>
+<div class="container-fluid img1">
+    <img class="img-main" src="images/coffee1.png">
 </div>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
+<br><br>
+
+<div class="subscribe">
+    <a href="/signup" class="btn waves-effect waves-light hit-subscribe">
+        Subscribe
+    </a>
+</div>
+
+<br><br><br>
+
+<div class="how-to">
+  <b>How It Works</b>
+</div>
+
+<br>
+
+<div class="container row col s12">
+    
+    <div class="col s4">
+      <b>One.</b>
+      <br>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis neque quae libero obcaecati dolorem et consequuntur. Fugiat hic iure earum, aliquid cum iste explicabo ducimus vero libero velit, et voluptate?
+    </div>
+    
+    <br>
+    
+    <div class="col s4">
+      <b>Two.</b>
+      <br>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis neque quae libero obcaecati dolorem et consequuntur. Fugiat hic iure earum, aliquid cum iste explicabo ducimus vero libero velit, et voluptate?
+    </div>
+    
+    <br>
+    
+    <div class="col s4">
+      <b>Three.</b>
+      <br>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis neque quae libero obcaecati dolorem et consequuntur. Fugiat hic iure earum, aliquid cum iste explicabo ducimus vero libero velit, et voluptate?
+    </div>
+        
+    <br>
+
+</div>
+
+<br><br>
+
+<div>
+  
+    <div class="container-fluid blueish row">
+
+    <br>
+
+        <div class="words col s6">
+
+            <br>
+            <b>One.</b>
+            <br>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis neque quae libero obcaecati dolorem et consequuntur. Fugiat hic iure earum, aliquid cum iste explicabo ducimus vero libero velit, et voluptate?
+            
+            <br><br>
+              But don't just take our word for it...
+
+            <br><br><br>
+
+            <div class="container quote">
+              "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque dignissimos ut, quaerat iure, voluptatem commodi ducimus eos officiis veritatis porro praesentium natus repudiandae minus dolores et ullam nam nobis eligendi? 
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores quaerat nobis soluta consequuntur voluptate eaque sapiente mollitia doloremque possimus inventore neque amet ducimus voluptatibus facilis expedita, at quisquam, saepe quia.""
+
+            <br><br><br>
+
+              <div class="rightalign">
+                - Guy Realperson
+              </div>
+            </div>
+
+            <br><br><br>
+
+          </div>
+
+          <div class="col s6">
+            <br>
+            <img class="coffeet" src="images/coffeet.jpg">
+            <br><br><br>
+          </div>
+
+        
+
+        <div class="small-text center">
+
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic dolorum corporis recusandae molestiae debitis aliquid! Adipisci labore pariatur itaque accusantium possimus non deleniti nisi, officia libero in dolor fuga unde.
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus deserunt optio ut, sunt, quisquam voluptatem id doloremque, porro et at commodi beatae iste ratione tempore nihil aperiam consectetur quidem ea.
+        
+        <br><br>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="container-fluid row col s12">
+
+<br>
+
+  <div class="col s4">
+
+    <b>One.</b>
+    <br>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis neque quae libero obcaecati dolorem et consequuntur. Fugiat hic iure earum, aliquid cum iste explicabo ducimus vero libero velit, et voluptate?
+
+  </div>
+
+    <br>
+
+  <div class="col s4">
+
+    <b>Two.</b>
+    <br>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis neque quae libero obcaecati dolorem et consequuntur. Fugiat hic iure earum, aliquid cum iste explicabo ducimus vero libero velit, et voluptate?
+
+  </div>
+
+    <br>
+    
+  <div class="col s4">
+
+    <b>Three.</b>
+    <br>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis neque quae libero obcaecati dolorem et consequuntur. Fugiat hic iure earum, aliquid cum iste explicabo ducimus vero libero velit, et voluptate?
+  
+  <br><br><br>
+  
+  </div>
+
+</div>
+
+<br><br><br>
+
+{{!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/index.js"></script> --}}

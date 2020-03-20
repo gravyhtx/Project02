@@ -28,11 +28,12 @@
 html,
 body {
     margin: 0 auto;
-    background-color: rgb(240, 228, 215);
+    color: #2f333a !important;
+    background-color: rgb(255, 255, 255);
     background-size: cover;
     scroll-behavior: smooth;
     cursor: default;
-    font-family: "Product Sans", "Open Sans";
+    font-family: "Product Sans", "Poppins", "Open Sans";
     font-size: 20px;
     /* text-align: center; */
 }
@@ -62,22 +63,23 @@ a:hover {
 
 .menu-link:hover {
     /* text-decoration: underline; */
-    text-shadow: rgb(13, 36, 17) 3px 2px;
-    background-color: rgb(52, 122, 64);
+    text-shadow: rgb(36, 36, 36) 3px 2px;
+    background-color: rgb(80, 80, 80);
 }
 
 .menu-link-side:hover {
     /* text-decoration: underline; */
     text-shadow: rgb(219, 219, 219) 1px 1px;
-    background-color: rgb(52, 122, 64);
+    background-color: rgb(112, 112, 112);
 }
 
 .navcolor {
-    background-color: #326832;
+    background-color: #282b30;
+    color: rgb(22, 22, 22) !important;
 }
 
 .navcolor:hover {
-    background-color: #296e29;
+    background-color: #353a41 !important;
 }
 
 .account {
@@ -104,6 +106,10 @@ a:hover {
     margin-top: 10px;
 }
 
+.navClass {
+    color: black !important;
+}
+
 /* BODY STYLES */
 
 .header {
@@ -120,10 +126,15 @@ a:hover {
   }
 
 .logo {
-    text-align: center;
-    width: 1000px;
-    display: block;
-    margin: 0 auto;
+    display: inline-block;
+    height: 50px;
+    margin-left: 10px;
+}
+
+.logo>img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 #coffee1 {
@@ -136,6 +147,27 @@ a:hover {
     z-index: -1;
 }
 
+.img-main {
+    width: 100%;
+    object-fit: cover;
+    size: cover;
+    margin: 0 auto;
+}
+
+.hit-subscribe {
+    background-color: #2e2e2e00 !important;
+    border: 2px solid #2e2e2e !important;
+    color: #2e2e2e !important;
+    font-size: 28px !important;
+    padding: 5px !important;
+    height: 50px !important;
+    width: 200px !important;
+}
+
+.words {
+    padding: 50px !important;
+}
+
 .s1 {
     background-color: rgb(24, 24, 24);
 }
@@ -145,7 +177,7 @@ a:hover {
 }
 
 .sFooter {
-    background-color: #114211;
+    margin-top: 30px !important;
 }
 
 .formclass {
@@ -160,6 +192,41 @@ a:hover {
     font-weight: bold;
 }
 
+.how-to {
+    text-align: center;
+    font-size: 28px;
+}
+
+.coffeet {
+    height: 1000px;
+    border: 25px solid rgb(250, 255, 203);
+}
+
+.quote {
+    font-style: italic;
+    background-color: rgba(255, 255, 255, 0.315);
+    color: #8393ac;
+    padding: 50px;
+    text-align: justify;
+    border: 25px solid rgba(203, 245, 255, 0.37);
+    font-size: 20px;
+}
+
+.small-text {
+    margin: 30px;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.rightalign {
+    text-align: right;
+    margin: 20px;
+}
+
+.signup-form{
+    margin: 30px !important;
+}
+
 .agreements {
     font-size: 12px;
 }
@@ -169,22 +236,62 @@ a:hover {
 }
 
 .input-field {
-    color: #000 !important;
+    color: rgb(27, 27, 27) !important;
     background-color: white !important;
 }
 
 .submit {
-    background-color: #296e29 !important;
+    background-color: #414141 !important;
+}
+
+.hit-subscribe {
+    background-color: #ffffff !important;
+    border: 2px solid #2e2e2e !important;
+    color: #2e2e2e !important;
+    font-size: 16px !important;
+    padding: 1px !important;
+    height: 40px !important;
+    width: 120px !important;
+}
+
+.customer-login {
+    color: #3b3e42;
+    margin-bottom: 50px !important;
+}
+
+.customer-cart {
+    color: #3b3e42;
+}
+
+#login-account {
+    margin-top: 20px;
 }
 
 #modal-account,
 #modal-cart {
-    background-color: rgb(245, 242, 238);
+    background-color: rgb(255, 254, 247);
     padding: 15px;
     border: 3px solid gray;
     border-radius: 20px;
     text-align: center;
     overflow: scroll;
+}
+
+.gray {
+    background-color: #282b30;
+    padding: 15px;
+    color: white !important;
+}
+
+.blueish {
+    background-color: #b2d2d8 !important;
+    padding: 15px;
+    color: #2f2f2f91 !important;
+}
+
+.yellowbkg {
+    background-color: rgb(254, 255, 215);
+    padding: 15px;
 }
 
 .notamember, .isamember {
@@ -193,6 +300,10 @@ a:hover {
 
 .isamember {
     margin-top: 20px;
+}
+
+.sm-cart {
+    font-size: 14px;
 }
 
 
