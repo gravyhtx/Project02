@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 $(document).ready(function() {
   const subscriptionForm = $("form#signup-subscription");
 
@@ -7,8 +8,11 @@ $(document).ready(function() {
 // insert form inputs here, including userId
     };
     if (!subscriptionInfo) {
-        return
+    return;
     }
-  })
+    console.log(subscriptionInfo);
+
+  });
       
+  function subscriptionSignUp()
 });
