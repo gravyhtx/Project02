@@ -102,7 +102,7 @@ a:hover {
 }
 
 .centerlogo {
-    width: 150px;
+    width: 120px;
     margin-top: 10px;
 }
 
@@ -166,6 +166,7 @@ a:hover {
 
 .words {
     padding: 50px !important;
+    font-size: 18px;
 }
 
 .s1 {
@@ -198,8 +199,13 @@ a:hover {
 }
 
 .coffeet {
-    height: 1000px;
+    /* min-height: 1000px; */
+    width: 85%;
+    width: 85%;
+    margin-top: 800px;
     border: 25px solid rgb(250, 255, 203);
+    display: inline;
+    text-align: center;
 }
 
 .quote {
@@ -207,13 +213,16 @@ a:hover {
     background-color: rgba(255, 255, 255, 0.315);
     color: #8393ac;
     padding: 50px;
+    padding-bottom: 25px;
     text-align: justify;
     border: 25px solid rgba(203, 245, 255, 0.37);
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .small-text {
     margin: 30px;
+    padding-left: 300px !important;
+    padding-right: 500px !important;
     font-size: 18px;
     font-weight: 100;
 }
@@ -285,8 +294,8 @@ a:hover {
 
 .blueish {
     background-color: #b2d2d8 !important;
-    padding: 15px;
     color: #2f2f2f91 !important;
+    padding-bottom: 50px;
 }
 
 .yellowbkg {
@@ -306,9 +315,135 @@ a:hover {
     font-size: 14px;
 }
 
+.huttese {
+    font-size: 20px;
+    text-align: center !important;
+    padding-right: 100px !important;
+    padding-left: -200px;
+}
 
-/* MOBILE ONLY STYLES */
+.choose {
+	padding: 20px !important;
+    width: 960px;
+    overflow: hidden;
+}
 
-@media only screen and (max-width: 767px) {
+.s-page {
+    padding-left: 20px !important;
+}
+
+#submit-subscription {
+    background-color: #2e2e2e00 !important;
+    border: 2px solid #2e2e2e !important;
+    color: #2e2e2e !important;
+    font-size: 28px !important;
+    padding: 5px !important;
+    height: 50px !important;
+    width: 200px !important;
+}
+
+
+/* iPad Styles */
+
+@media only screen and (max-width: 768px) {
     
+    .column-words {
+        font-size: 12px;
+        margin-bottom: 100px !important;
+    }
+
+    .blueish {
+        padding: 5px !important;
+        text-align: justify;
+        margin: 1px !important;
+    }
+
+    .words {
+        padding: 10px !important;
+        font-size: 16px;
+    }
+
+    .coffeet {
+        /* height: 200px; */
+        width: 100%;
+        height: 100%;
+        border: 20px solid rgb(250, 255, 203);
+        margin: 0 auto;
+        text-align: center !important;
+    }
+    
+    .quote {
+        font-style: italic;
+        background-color: rgba(255, 255, 255, 0.315);
+        color: #8393ac;
+        padding: 25px;
+        padding-bottom: 10px;
+        text-align: justify;
+        border: 10px solid rgba(203, 245, 255, 0.37);
+        font-size: 14px;
+    }
+
+    .small-text {
+        margin: 0 auto !important;
+        font-size: 18px;
+        padding: -50px;
+    }
+
+    .huttese {
+        text-align: left;
+    }
+}
+
+/* Mobile Styles */
+
+@media only screen and (max-width: 400px) {
+
+    html,
+    body {
+        padding: -5px;
+    }
+    .column-words {
+        font-size: 12px;
+    }
+
+    .words {
+        padding: 10px !important;
+        font-size: 16px;
+    }
+
+    .coffeet {
+        /* height: 200px; */
+        border: 10px solid rgb(250, 255, 203);
+        margin-left: 10px;
+    }
+    
+    .quote {
+        font-style: italic;
+        background-color: rgba(255, 255, 255, 0.315);
+        color: #8393ac;
+        padding: 25px;
+        padding-bottom: 10px;
+        text-align: justify;
+        border: 10px solid rgba(203, 245, 255, 0.37);
+        font-size: 14px;
+    }
+
+    .small-text {
+        padding: -5px !important;
+        font-size: 12px;
+        text-align: justify !important;
+        padding: 18px !important;
+    }
+
+    .choose {
+        text-align: right;
+    }
+
+    .huttese {
+        margin-left: -15px;
+        margin-top: -20px;
+        text-align: justify !important;
+        font-size: 10px;
+    }
+
 }
