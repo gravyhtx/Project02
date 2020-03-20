@@ -61,7 +61,7 @@ $(document).ready(function() {
 
     userSignUp(userInfo.email, userInfo.password);
     emailInput.val("");
-    passwordInput.val("");
+    passInput.val("");
   });
 
   function userSignUp(email, password) {
@@ -73,11 +73,8 @@ $(document).ready(function() {
         console.log(data);
         window.location.replace("/");
       })
-      .catch(handleLoginErr);
-  }
-
-  function handleLoginErr(err) {
-    $("#alert .msg").text(err.responseJSON);
-    $("#alert").fadeIn(500);
+      .catch(function(err){
+        console.log("ERROR IS " + err);
+      });
   }
 });
