@@ -33,16 +33,16 @@ module.exports = function(app) {
       res.redirect("/");
     });
   //Route which allows user to sign into website
-  app.post("/api/signup", function (req, res) {
+  app.post("/api/signup", function(req, res) {
     db.User.create({
       email: req.body.email,
-      username: req.body.username,
+      // username: req.body.username,
       password: req.body.password,
-      first_name: req.body.first_name,
-      last_name: req.body.last_name,
-      address: req.body.address
-      
+      // first_name: req.body.first_name,
+      // last_name: req.body.last_name,
+      // address: req.body.address
     })
+    console.log(res)
       .then(function() {
         res.redirect(307, "/");
       })
