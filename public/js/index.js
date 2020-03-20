@@ -53,11 +53,10 @@ $(document).ready(function() {
       email: emailInput.val().trim(),
       password: passInput.val().trim()
     };
-    console.log(userInfo);
     if (!userInfo.email || !userInfo.password) {
-      alert("Invalid");
-      // return;
+      return;
     }
+    console.log(userInfo);
 
     userSignUp(userInfo.email, userInfo.password);
     emailInput.val("");
