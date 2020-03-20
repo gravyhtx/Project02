@@ -30,9 +30,9 @@ module.exports = function(app) {
   });
   //Route that logs the user out of the database 
   app.get("/logout", function(req, res) {
-      req.logout();
-      res.redirect("/");
-    });
+    req.logout();
+    res.redirect("/");
+  });
   //Route which allows user to sign into website
   app.post("/api/signup", function(req, res) {
     db.User.create({
@@ -43,17 +43,16 @@ module.exports = function(app) {
       // last_name: req.body.last_name,
       // address: req.body.address
     })
-      .then(function() {
-        console.log(res);
-        res.redirect(307, "/");
+      .then(function(data) {
+        res.json(data);
       })
       .catch(function(err) {
+        console.log(err);
         res.status(401).json(err);
       });
   });
 
 
-  // 
   // app.post("/api/coffee", function(req, res)  {
   //   db.Coffee.create(req.body).then(function(dbcoffee) {
   //     res.json(dbcoffee);
