@@ -61,7 +61,7 @@ $(document).ready(function() {
 
     userSignUp(userInfo.email, userInfo.password);
     emailInput.val("");
-    passwordInput.val("");
+    passInput.val("");
   });
 
   function userSignUp(email, password) {

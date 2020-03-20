@@ -13,7 +13,7 @@ module.exports = function(app) {
   app.get("/api/:coffee?", function(req, res) {
     if (req.params.id) {
       // Display the JSON for that specific roast
-      Coffee.findOne({
+      db.Coffee.findOne({
         where: {
           id: req.params.id
         }
@@ -22,7 +22,7 @@ module.exports = function(app) {
       });
     } else {
       //Display all roasts within the database
-      coffee.findAll().then(function(result) {
+      db.Coffee.findAll().then(function(result) {
         return res.json(result);
       });
     }
@@ -37,7 +37,7 @@ module.exports = function(app) {
     db.User.create({
       email: req.body.email,
       // username: req.body.username,
-      password: req.body.password,
+      password: req.body.password
       // first_name: req.body.first_name,
       // last_name: req.body.last_name,
       // address: req.body.address
