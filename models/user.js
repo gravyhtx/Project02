@@ -1,3 +1,6 @@
+/* eslint-disable camelcase */
+/* eslint-disable prettier/prettier */
+/* eslint-disable indent */
 let bcrypt = require("bcryptjs");
 
 module.exports = function(sequelize, DataTypes) {

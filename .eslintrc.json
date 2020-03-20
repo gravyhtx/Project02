@@ -11,7 +11,7 @@
       ],
     "rules": {
         "parserOptions": {
-            "ecmaVersion": 2017
+            "ecmaVersion": "es6"
         },
         "env": {
             "es6": true

@@ -2,7 +2,7 @@
 
 <div class="col s12 formclass container row loginsignup z-depth-3">
 
-    <form class="row col s12">
+    <form class="row col s12 signup">
 
         <!-- CREATE ACCOUNT -->
 
@@ -24,11 +24,7 @@
         </div>
         <div class="row">
             <div class="input-field col s6">
-<<<<<<< HEAD
-                <input id="username" type="text" data-length="12">
-=======
                 <input id="user_name" type="text" data-length="12">
->>>>>>> 9fdf1d1a4a5ee449a80847cddf0fbef7ef3f8010
                 <label for="input_text">Username</label>
             </div>
             <div class="input-field col s6">
@@ -59,8 +55,8 @@
                 <label for="street1">Street Address</label>
             </div>
             <div class="input-field col s3">
-                <input placeholder="Unit" id="last_name" type="text" class="validate">
-                <label for="last_name">Unit</label>
+                <input placeholder="Unit" id="unit" type="text" class="validate">
+                <label for="unit">Unit</label>
             </div>
         </div>
         <div class="row">
@@ -350,3 +346,15 @@
 
     </form>
     </div>
+
+        {{!-- JQUERY --}}
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    {{!-- MATERIALIZE JS --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    {{!-- MATERIALIZE INIT --}}
+    <script>M.AutoInit();</script>
+
+    {{!-- MAIN JAVASCRIPT --}}
+    <script type="text/javascript" src ="/js/index.js"></script>
