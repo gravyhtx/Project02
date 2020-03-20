@@ -43,10 +43,12 @@
         <div class="nav-wrapper navcolor col-12-sm z-depth-3">
             <div class="container-fluid left-logo col-12">
 
-                {{!-- LOGIN --}}
-                <a href="#" class="menu-link logo-side">
-                    <img class="centerlogo" src="images/jc_logo_white.svg">
+                {{!-- LOGO --}}
+                
+                <a href="/" class="menu-link logo">
+                    <img class="center logo" src="images/jc_logo_white.svg">
                 </a>
+                
 
                 {{!-- MOBILE MENU ICON --}}
                 <a href="#" data-target="mobile-side" class="sidenav-trigger"><i class="material-icons">menu</i></a>
@@ -60,7 +62,7 @@
                 <li><a href="#" class="menu-link mission">
                     OUR MISSION</a>
                 </li>
-                <li><a href="#" class="menu-link contact">
+                <li><a href="#footer" class="menu-link contact">
                     CONTACT US
                 </a></li>
                 <li><a href="#modal-account" class="modal-trigger menu-link account">
@@ -87,7 +89,7 @@
                 <li><a href="#" class="menu-link-side mission">
                     OUR MISSION</a>
                 </li>
-                <li><a href="#" class="menu-link-side contact">
+                <li><a href="#footer" class="menu-link-side contact">
                     CONTACT US
                 </a></li>
                 <li><a href="#modal-account" class="modal-trigger menu-link-side account">
@@ -110,7 +112,7 @@
 
     <div id="modal-account" class="modal">
         <div class="isamember modal-content">
-            <h3><b>CUSTOMER LOG IN</b></h3>
+            <h3 class="customer-login"><b>Login</b></h3>
             <div class="col s12 formclass container row loginsignup z-depth-3">
                 <form class="row col s12 login-form">
                     <div class="row input-field col s12">
@@ -133,8 +135,8 @@
                 <b>Not a member yet?</b>
             </div>
             <div class="row submitrow">
-                <a href="/signup" class="submit waves-effect waves-light btn" id="signup-button">
-                    CREATE ACCOUNT
+                <a href="/signup" class="submit hit-subscribe waves-effect waves-light btn" id="signup-button">
+                    <b>CREATE ACCOUNT</b>
                 </a>
             </div>
         </div>
@@ -142,20 +144,27 @@
 
     <div id="modal-cart" class="modal">
         <div class="modal-content">
-            <h3>Your Cart</h3>
+            <h3 class="customer-cart"><b>Cart</b></h3>
             <hr>
-            <br>
-            <div class="kaffe"></div>
-            <br>
+            <br><br>
+            <div class="kaffe">
+                Your cart is empty.
+                <br>
+                <span class="sm-cart">
+                    ( Why don't you check out some of our delicious products! )
+                </span>
+            </div>
+            <br><br>
             <div class="row submitrow">
-                <button class="submit waves-effect waves-light btn" id="cart-checkout">
-                    CHECKOUT
+                <button class="submit hit-subscribe waves-effect waves-light btn" id="cart-checkout">
+                    <b>CHECKOUT</b>
                 </button>
+                <br>
             </div>
         </div>
     </div>
 
-    <div class="sFooter">
+    <div class="sFooter gray" id="footer">
         <br><br><br><br>
     </div>
 
