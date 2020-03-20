@@ -1,4 +1,5 @@
 var db = require("../models");
+var passport = require("../config/passport");
 
 module.exports = function(app) {
   // Route which allow user to view all coffee within the database
@@ -42,8 +43,8 @@ module.exports = function(app) {
       // last_name: req.body.last_name,
       // address: req.body.address
     })
-    console.log(res)
       .then(function() {
+        console.log(res);
         res.redirect(307, "/");
       })
       .catch(function(err) {
