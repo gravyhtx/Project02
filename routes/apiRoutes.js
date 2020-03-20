@@ -35,6 +35,7 @@ module.exports = function(app) {
   //Route which allows user to sign into website
   app.post("/api/signup", function (req, res) {
     db.User.create({
+      email: req.body.email,
       username: req.body.username,
       password: req.body.password,
       first_name: req.body.first_name,
@@ -43,7 +44,7 @@ module.exports = function(app) {
       
     })
       .then(function() {
-        res.redirect(307, "/api/login");
+        res.redirect(307, "/");
       })
       .catch(function(err) {
         res.status(401).json(err);

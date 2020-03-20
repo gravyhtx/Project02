@@ -10,6 +10,12 @@
         "prettier"
       ],
     "rules": {
+        "parserOptions": {
+            "ecmaVersion": "es6"
+        },
+        "env": {
+            "es6": true
+        },
         "no-duplicate-case":"error",
         "no-empty":"error",
         "no-extra-semi":"error",
