@@ -164,6 +164,10 @@ a:hover {
     width: 200px !important;
 }
 
+.words {
+    padding: 50px !important;
+}
+
 .s1 {
     background-color: rgb(24, 24, 24);
 }
