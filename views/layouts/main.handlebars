@@ -25,11 +25,11 @@
     <link href="https://fonts.googleapis.com/css?family=Sen|Open+Sans|Spartan|Sacramento|&display=swap" rel="stylesheet">
     
     {{!-- PRODUCT SANS --}}
-    <link href="../../public/fonts/ProductSans-Thin.ttf">
-    <link href="../../public/fontsfonts/ProductSans-Light.ttf">
-    <link href="../../public/fontsfonts/ProductSans-Regular.ttf">
-    <link href="../../public/fontsfonts/ProductSans-Medium.ttf">
-    <link href="../../public/fontsfonts/ProductSans-Bold.ttf">
+    <link href="/public/fonts/ProductSans-Thin.ttf">
+    <link href="/public/fonts/ProductSans-Light.ttf">
+    <link href="/public/fonts/ProductSans-Regular.ttf">
+    <link href="/public/fonts/ProductSans-Medium.ttf">
+    <link href="/public/fonts/ProductSans-Bold.ttf">
 
 </head>
 
@@ -38,7 +38,7 @@
     <main class="container-fluid">
 
         {{!-- NAVBAR --}}
-        <div class="navbar-fixed navClass">
+        <div class="navbar-fixed grey navClass">
         <nav>
         <div class="nav-wrapper navcolor col-12-sm z-depth-3">
             <div class="container-fluid left-logo col-12">
@@ -67,7 +67,8 @@
                     <i class="material-icons cart">account_box</i>
                 </a></li>
                 <li><a href="#modal-cart" class="modal-trigger menu-link cart">
-                    <i class="material-icons cart">shopping_cart</i>
+                    {{!-- CHANGE INNER HTML TO 'shopping_cart' IF CUSTOMER HAS ITEMS IN CART --}}
+                    <i class="material-icons cart">add_shopping_cart</i>
                 </a></li>
 
             </ul>
