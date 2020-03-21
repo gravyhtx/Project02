@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 /* eslint-disable prettier/prettier */
 /* eslint-disable indent */
-let bcrypt = require("bcryptjs");
+const bcrypt = require("bcryptjs");
 
 module.exports = function(sequelize, DataTypes) {
     const User = sequelize.define("User", {
@@ -15,7 +15,7 @@ module.exports = function(sequelize, DataTypes) {
         },
         username: {
             type: DataTypes.STRING,
-            allowNull: true,
+            allowNull: false,
             unique: true
         },
         password: {
@@ -27,40 +27,47 @@ module.exports = function(sequelize, DataTypes) {
         },
         first_name: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
 
         },
         last_name:{
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
 
-        },
-        street_address: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        unit:{
-            type: DataTypes.STRING,
-            allowNull: true
-        },
-        city: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-        state:{
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-        zip_code: {
-            type: DataTypes.INTEGER,
-            allowNull: false
-        },
-        country_id:{
-            type: DataTypes.STRING,
-            allowNull: false
+        // },
+        // street_address: {
+        //     type: DataTypes.STRING,
+        //     allowNull: false,
+        // },
+        // unit:{
+        //     type: DataTypes.STRING,
+        //     allowNull: true
+        // },
+        // city: {
+        //     type: DataTypes.STRING,
+        //     allowNull: false
+        // },
+        // state:{
+        //     type: DataTypes.STRING,
+        //     allowNull: false
+        // },
+        // zip_code: {
+        //     type: DataTypes.INTEGER,
+        //     allowNull: false
+        // },
+        // country_id:{
+        //     type: DataTypes.STRING,
+        //     allowNull: false
         }
        
     });
+    User.associate = function(models) {
+        // Associating User with Subscription
+        // When User is deleted, also delete any associated Subscriptions
+        User.hasMany(models.Subscription, {
+            onDelete: "cascade"
+        });
+    };
     // Creating a method that will check if the unhashed password  can be created to a previously created password
     User.prototype.validPassword = function(password) {
         return bcrypt.compareSync(password, this.password);
