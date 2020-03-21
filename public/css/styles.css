@@ -28,6 +28,7 @@
 html,
 body {
     margin: 0 auto;
+    width: 100%;
     color: #2f333a !important;
     background-color: rgb(255, 255, 255);
     background-size: cover;
@@ -36,6 +37,10 @@ body {
     font-family: "Product Sans", "Poppins", "Open Sans";
     font-size: 20px;
     /* text-align: center; */
+}
+
+a {
+    color: #97a6c0 !important;
 }
 
 a:hover {
@@ -193,6 +198,10 @@ a:hover {
     font-weight: bold;
 }
 
+.learn-more {
+    text-align: center !important;
+}
+
 .how-to {
     text-align: center;
     font-size: 28px;
@@ -200,36 +209,60 @@ a:hover {
 
 .coffeet {
     /* min-height: 1000px; */
-    width: 85%;
-    width: 85%;
-    margin-top: 800px;
+    width: 25%;
+    width: 25%;
+    /* margin-left: 100px; */
     border: 25px solid rgb(250, 255, 203);
-    display: inline;
+    margin: 0 auto !important;
+    margin-top: 60px !important;
+    display: block !important;
+    text-align: center !important;
+}
+
+#coffeet {
+    margin-bottom: 100px !important;
+}
+
+.white {
+    background-color: white !important;
+}
+
+.below-coffeet {
     text-align: center;
+    margin-bottom: 100px !important;
+}
+
+.mission-statement {
+    color: #343941 !important;
 }
 
 .quote {
     font-style: italic;
-    background-color: rgba(255, 255, 255, 0.315);
+    background-color: rgba(255, 255, 255, 0.514);
     color: #8393ac;
     padding: 50px;
     padding-bottom: 25px;
     text-align: justify;
-    border: 25px solid rgba(203, 245, 255, 0.37);
+    border: 25px solid rgba(203, 245, 255, 0.767);
     font-size: 16px;
+    width: 600px !important;
+}
+
+.droids {
+    text-align: right;
+    margin-right: 100px;
+    margin-bottom: 300px;
+}
+
+.more {
+    margin-bottom: 200px;
 }
 
 .small-text {
-    margin: 30px;
-    padding-left: 300px !important;
-    padding-right: 500px !important;
     font-size: 18px;
     font-weight: 100;
-}
-
-.rightalign {
-    text-align: right;
-    margin: 20px;
+    margin-left: 100px !important;
+    text-align: left !important;
 }
 
 .signup-form{
@@ -316,10 +349,8 @@ a:hover {
 }
 
 .huttese {
-    font-size: 20px;
-    text-align: center !important;
-    padding-right: 100px !important;
-    padding-left: -200px;
+    font-size: 200px;
+    text-align: right !important;
 }
 
 .choose {
@@ -341,6 +372,22 @@ a:hover {
     height: 50px !important;
     width: 200px !important;
 }
+
+
+.rightalign {
+    text-align: right;
+    margin: 20px;
+}
+
+
+.lorem-words {
+    text-align: right !important;
+}
+
+.dont-words {
+    text-align: center !important;
+}
+
 
 
 /* iPad Styles */
@@ -402,6 +449,7 @@ a:hover {
     body {
         padding: -5px;
     }
+
     .column-words {
         font-size: 12px;
     }
@@ -419,13 +467,13 @@ a:hover {
     
     .quote {
         font-style: italic;
-        background-color: rgba(255, 255, 255, 0.315);
         color: #8393ac;
         padding: 25px;
         padding-bottom: 10px;
         text-align: justify;
         border: 10px solid rgba(203, 245, 255, 0.37);
         font-size: 14px;
+        width: 300px !important;
     }
 
     .small-text {
@@ -440,10 +488,19 @@ a:hover {
     }
 
     .huttese {
-        margin-left: -15px;
-        margin-top: -20px;
+        margin-left: 15px;
+        margin-top: 10px;
         text-align: justify !important;
-        font-size: 10px;
+        font-size: 50px;
+    }
+
+    .more {
+        margin-bottom: 1200px !important;
+    }
+
+    .droids {
+        margin: 0 auto !important;
+        margin-bottom: 300px !important;
     }
 
 }
