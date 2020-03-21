@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    
+    <title>Just Coffee</title>
+
+    {{!-- MAIN STYLE --}}
+    <link rel="stylesheet" href="css/styles.css">
+
+    {{!-- MATERIALIZE ICONS --}}
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    {{!-- MATERIALIZE CDN --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    {{!-- Animate.CSS --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+    {{!-- GOOGLE FONTS --}}
+    <link href="https://fonts.googleapis.com/css?family=Sen|Open+Sans|Spartan|Sacramento|&display=swap" rel="stylesheet">
+    
+    {{!-- PRODUCT SANS --}}
+    <link href="/public/fonts/ProductSans-Thin.ttf">
+    <link href="/public/fonts/ProductSans-Light.ttf">
+    <link href="/public/fonts/ProductSans-Regular.ttf">
+    <link href="/public/fonts/ProductSans-Medium.ttf">
+    <link href="/public/fonts/ProductSans-Bold.ttf">
+
+</head>
+
+<body>
+
+<main class="container-fluid">
+
+<div class="s-page">
+    <h2 class="choose"><b>&emsp;Choose your subscription.</b></h2>
+</div>
+
+<br>
+
+<div class="container row col s12">
+    
+    <div class="col s4">
+        <b>Featured.</b>
+        <br>
+        <div class="column-words">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis neque quae libero obcaecati dolorem et consequuntur. Fugiat hic iure earum, aliquid cum iste explicabo ducimus vero libero velit, et voluptate?
+        </div>
+
+        <br><br>
+
+
+    </div>
+    
+    <div class="col s4">
+        <b>Curated.</b>
+        <br>
+        <div class="column-words">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis neque quae libero obcaecati dolorem et consequuntur. Fugiat hic iure earum, aliquid cum iste explicabo ducimus vero libero velit, et voluptate?
+        </div>
+
+        <br><br>
+
+
+    </div>
+    
+    <div class="col s4">
+        <b>The Works.</b>
+        <br>
+        <div class="column-words">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis neque quae libero obcaecati dolorem et consequuntur. Fugiat hic iure earum, aliquid cum iste explicabo ducimus vero libero velit, et voluptate?
+        </div>
+
+        <br><br>
+
+
+    </div>
+        
+
+    <form class="container">
+
+        <br><br>
+
+
+            <div class="row">
+            <br>
+            <h3><b>Subsription.</b></h3>
+            <br>
+
+            <b>Subscription Type</b>
+            <br>
+
+            <div class="input-field">
+                <select>
+                    <option value="" disabled selected>Type</option>
+                    <option value="sub-1">Featured</option>
+                    <option value="sub-1">Curated</option>
+                    <option value="sub-3">The Works</option>
+                </select>
+            </div>
+
+            <br><br>
+
+            <b>Coffee Count</b>
+            <br>
+
+            <div class="input-field">
+                <select>
+                    <option value="" disabled selected>Number of Bags</option>
+                    <option value="count-1">One</option>
+                    <option value="count-2">Two</option>
+                    <option value="count-3">Three</option>
+                    <option value="count-4">Four</option>
+                    <option value="count-5">Five</option>
+                </select>
+            </div>
+
+            <br><br>
+
+
+            <b>Frequency</b>
+            <br>
+
+            <div class="input-field">
+                <select>
+                    <option value="" disabled selected>Times per month</option>
+                    <option value="freq-1">Once a month</option>
+                    <option value="freq-2">Twice a month</option>
+                </select>
+            </div>
+
+            <br><br>
+
+            <div class="terms center">
+
+            I agree to <a class="modal-trigger" href="#modal1">Terms and Conditions</a>.
+            </div>
+            
+        <br>
+        <div class="switch center">
+            <label>
+            No
+            <input type="checkbox">
+            <span class="lever"></span>
+            Yes
+            </label>
+        </div>
+    </div>
+
+    <br><br><br>
+
+        <!-- SUBMIT -->
+
+        <div class="row center submitrow">
+            <button class="btn" id="submit-subscription">
+                SUBMIT
+            </button>
+        </div>
+
+    </form>
+
+</div>
+
+<br><br><br><br>
+
+</main>
+
+
+<!-- {{!-- JQUERY --}} -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+<!-- {{!-- MATERIALIZE JS --}} -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<!-- {{!-- MATERIALIZE INIT --}} -->
+<script>M.AutoInit();</script>
+
+<!-- {{!-- MAIN JAVASCRIPT --}} -->
+<script type="text/javascript" src ="/js/index.js"></script>
+</body>
+
+</html>

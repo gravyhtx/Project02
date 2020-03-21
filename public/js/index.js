@@ -48,7 +48,7 @@ $(document).ready(function() {
         console.log(err);
       });
   }
-  //Section begins the signup Portion of the JS-----------------------------------------------------------------------------------
+  //Section begins the user signup Portion of the JS-----------------------------------------------------------------------------------
   // eslint-disable-next-line prettier/prettier
   signUpForm.on("submit", (event) => {
     event.preventDefault();
@@ -99,10 +99,10 @@ $(document).ready(function() {
       state: state
     })
       .then(function(data) {
-        // console.log(data);
+        localStorage.setItem("User", data.id);
         window.location.replace("/");
       })
-      .catch(function(err){
+      .catch(function(err) {
         console.log("ERROR IS " + err);
       });
   }
