@@ -184,6 +184,8 @@ a:hover {
 
 .sFooter {
     margin-top: 30px !important;
+    font-size: 12px !important;
+    text-align: center !important;
 }
 
 .formclass {
