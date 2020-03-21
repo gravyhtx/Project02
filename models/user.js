@@ -13,48 +13,52 @@ module.exports = function(sequelize, DataTypes) {
             //     isEmail:true
             // }
         },
-        // username: {
-        //     type: DataTypes.STRING,
-        //     allowNull: true,
-        //     unique: true
-        // },
+        username: {
+            type: DataTypes.STRING,
+            allowNull: true,
+            unique: true
+        },
         password: {
             type: DataTypes.STRING,
             allowNull:false,
             // validate: {
             //     len: [3]
             //   }
+        },
+        first_name: {
+            type: DataTypes.STRING,
+            allowNull: false,
+
+        },
+        last_name:{
+            type: DataTypes.STRING,
+            allowNull: false,
+
+        },
+        street_address: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        unit:{
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        city: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        state:{
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        zip_code: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        country_id:{
+            type: DataTypes.STRING,
+            allowNull: false
         }
-        // first_name: {
-        //     type: DataTypes.STRING,
-        //     allowNull: false,
-
-        // },
-        // last_name:{
-        //     type: DataTypes.STRING,
-        //     allowNull: false,
-
-        // },
-        // street_address: {
-        //     type: DataTypes.STRING,
-        //     allowNull: false,
-        // },
-        // unit:{
-        //     type: DataTypes.STRING,
-        //     allowNull: true
-        // },
-        // zip_code: {
-        //     type: DataTypes.STRING,
-        //     allowNull: false
-        // },
-        // city_id: {
-        //     type: DataTypes.INTEGER,
-        //     allowNull: false
-        // },
-        // country_id:{
-        //     type: DataTypes.INTEGER,
-        //     allowNull: false
-        // }
        
     });
     // Creating a method that will check if the unhashed password  can be created to a previously created password

@@ -37,14 +37,20 @@ module.exports = function(app) {
   app.post("/api/signup", function(req, res) {
     db.User.create({
       email: req.body.email,
-      // username: req.body.username,
-      password: req.body.password
-      // first_name: req.body.first_name,
-      // last_name: req.body.last_name,
-      // address: req.body.address
+      username: req.body.username,
+      password: req.body.password,
+      first_name: req.body.first_name,
+      last_name: req.body.last_name,
+      street_address: req.body.street,
+      unit: req.body.unit,
+      city: req.body.city,
+      zip_code: req.body.zip,
+      country_id: req.body.country,
+      state: req.body.state
     })
       .then(function(data) {
         res.json(data);
+        console.log(res.json(data.user));
       })
       .catch(function(err) {
         console.log(err);
