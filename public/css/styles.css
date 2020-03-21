@@ -131,7 +131,7 @@ a:hover {
   }
 
 .logo {
-    display: inline-block;
+    display: inline-block !important;
     height: 50px;
     margin-left: 10px;
 }
@@ -267,6 +267,10 @@ a:hover {
     text-align: left !important;
 }
 
+.smaller-text {
+    font-size: 12px;
+}
+
 .signup-form{
     margin: 30px !important;
 }
@@ -389,6 +393,15 @@ a:hover {
 .dont-words {
     text-align: center !important;
 }
+
+.block {
+    display: block !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+    max-height: 200px;
+    width: auto;
+}
+
 
 
 
