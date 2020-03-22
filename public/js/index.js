@@ -3,7 +3,7 @@ $(document).ready(function() {
   //Consistent point of reference for id and classes within the handlebars files.
   const loginForm = $("form.login-form");
   const loginUsername = $("input#login-username");
-  const loginPassword = $("input#login-password")
+  const loginPassword = $("input#login-password");
 
   const signUpForm = $("form.signup");
   const emailInput = $("input#email");
@@ -30,7 +30,7 @@ $(document).ready(function() {
     if (!userInfo.username || !userInfo.password) {
       return;
     }
-
+    console.log(userInfo);
     // Clears form if a valid username and password exists, and runs userLogin.
     userLogin(userInfo.username, userInfo.password);
     loginUsername.val("");
@@ -43,7 +43,8 @@ $(document).ready(function() {
       username: username,
       password: password
     })
-      .then(function() {
+      .then(function(user) {
+        localStorage.setItem("User", user.id);
         window.location.replace("/members");
         // Logs error, if an error
       })
@@ -96,7 +97,6 @@ $(document).ready(function() {
     zipInput.val("");
     countryInput.val("");
     stateInput.val("");
-    console.log(userInput);
   });
 
   function userSignUp(
@@ -125,9 +125,9 @@ $(document).ready(function() {
       country: country,
       state: state
     })
-      .then(function(data) {
-        localStorage.setItem("User", data.id);
-        window.location.replace("/");
+      .then(function(user) {
+        localStorage.setItem("User", user.id);
+        window.location.replace("/members");
       })
       .catch(function(err) {
         console.log("ERROR IS " + { err });

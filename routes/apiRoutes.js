@@ -3,37 +3,38 @@ var passport = require("../config/passport");
 
 module.exports = function(app) {
   // Route which allow user to view all coffee within the database
-  app.get("/api/coffee", function(req, res) {
-    db.Coffee.findAll({}).then(function(dbcoffee) {
-      res.json(dbcoffee);
-    });
-  });
+  // app.get("/api/coffee", function(req, res) {
+  //   db.Coffee.findAll({}).then(function(dbcoffee) {
+  //     res.json(dbcoffee);
+  //   });
+  // });
 
-  // Search for Specific roast of all of the roasts within the database
-  app.get("/api/:coffee?", function(req, res) {
-    if (req.params.id) {
-      // Display the JSON for that specific roast
-      db.Coffee.findOne({
-        where: {
-          id: req.params.id
-        }
-      }).then(function(result) {
-        return res.json(result);
-      });
-    } else {
-      //Display all roasts within the database
-      db.Coffee.findAll().then(function(result) {
-        return res.json(result);
-      });
-    }
-  });
-  //Route that logs the user out of the database 
+  // // Search for Specific roast of all of the roasts within the database
+  // app.get("/api/:coffee?", function(req, res) {
+  //   if (req.params.id) {
+  //     // Display the JSON for that specific roast
+  //     db.Coffee.findOne({
+  //       where: {
+  //         id: req.params.id
+  //       }
+  //     }).then(function(result) {
+  //       return res.json(result);
+  //     });
+  //   } else {
+  //     //Display all roasts within the database
+  //     db.Coffee.findAll().then(function(result) {
+  //       return res.json(result);
+  //     });
+  //   }
+  // });
+
+  //Route that logs the user out of the database
   app.get("/logout", function(req, res) {
     req.logout();
     res.redirect("/");
   });
 
-  app.post("/api/login", passport.authenticate("local"), function(req, res){
+  app.post("/api/login", passport.authenticate("local"), function(req, res) {
     res.json(req.user);
   });
 
@@ -63,14 +64,14 @@ module.exports = function(app) {
       });
   });
 
-  app.get("/api/user_data", function(req, res){
-    if (!req.user){res.json({});}
-    else {
-      res.json({
-        username:
-      });
-    }
-  });
+  // app.get("/api/user_data", function(req, res){
+  //   if (!req.user){res.json({});}
+  //   else {
+  //     res.json({
+  //       username:
+  //     });
+  //   }
+  // });
 
   // app.post("/api/coffee", function(req, res)  {
   //   db.Coffee.create(req.body).then(function(dbcoffee) {
@@ -79,9 +80,9 @@ module.exports = function(app) {
   // });
 
   // Route which removes coffee from the database
-  app.delete("/api/coffee/:id", (req, res) => {
-    db.Coffee.destroy({ where: { id: req.params.id } }).then((dbcoffee) =>{
-      res.json(dbcoffee);
-    });
-  });
+  // app.delete("/api/coffee/:id", (req, res) => {
+  //   db.Coffee.destroy({ where: { id: req.params.id } }).then((dbcoffee) =>{
+  //     res.json(dbcoffee);
+  //   });
+  // });
 };

@@ -6,7 +6,7 @@ const db = require("../models");
 // using local strategy for unique identifiers for each user
 passport.use(
   new LocalStrategy(
-    // Our user will sign in using an username, rather than a "username"
+    // Our user will sign in using an username
     {
       usernameField: "username"
     },
