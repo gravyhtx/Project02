@@ -416,6 +416,10 @@ a:hover {
     margin-bottom: 10px;
 }
 
+.whitebkg {
+    background-color: white !important;
+}
+
 
 /* iPad Styles */
 

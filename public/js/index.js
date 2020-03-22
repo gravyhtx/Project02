@@ -134,3 +134,13 @@ $(document).ready(function() {
       });
   }
 });
+
+var isLoggedIn = false;
+
+if (isLoggedIn == true) {
+    $("div.customer-login").html('<h3><b>Login</b></h3>     <div class="col s12 formclass container row loginsignup z-depth-3"><form class="row col s12 login-form"><div class="row input-field col s12">    <input id="login-username" type="text" class="validate">    <label for="login-username">Username</label></div><br><div class="row input-field col s12">    <input id="login-password" type="text" class="validate">    <label for="login-password">Password</label></div><br><a href="/members" class="submit waves-effect waves-light btn" id="login-account">    LOG IN</a></form></div><br><div class="notamember">    <b>Not a member yet?</b></div><div class="row submitrow">    <a href="/signup" class="submit hit-subscribe waves-effect waves-light btn" id="signup-button"><b>CREATE ACCOUNT</b>    </a></div>')
+}
+else if (isLoggedIn == false) {
+    $("div.customer-login").html('<div class="whitebkg">    <h3 class="h3profile"><b>Account Info</b></h3>     <div class="profile-details"><b>Logged in as <span class="modal-username"></span></b>    <br>    <div class="accountinfo container row loginsignup">    <div class="profile-details">    <b>First Name</b><div class="btmsp"><span class="modal-fname"></span></div>    <b>Last Name</b><div class="btmsp"><span class="modal-lname"></span></div>    <b>Email</b><div class="btmsp"><span class="modal-email"></span></div>    <br>    <b>Subscription</b><br><span class="modal-subscription"></span>    </div></div>    <div class="center"><button class="submit hit-subscribe waves-effect waves-light btn" id="log-off"><b>LOG OFF</b></button></div>   <br></div></div></div> </div>')
+}
+
