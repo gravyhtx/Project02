@@ -9,25 +9,25 @@
     
     <title>Just Coffee</title>
 
-    {{!-- MAIN STYLE --}}
-    <link rel="stylesheet" href="css/styles.css">
+    <!-- {{!-- MAIN STYLE --}} -->
+    <link rel="stylesheet" href="../../public/css/styles.css">
 
-    {{!-- MATERIALIZE ICONS --}}
+    <!-- {{!-- MATERIALIZE ICONS --}} -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    {{!-- MATERIALIZE CDN --}}
+    <!-- {{!-- MATERIALIZE CDN --}} -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-    {{!-- Animate.CSS --}}
+    <!-- {{!-- Animate.CSS --}} -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
-    {{!-- GOOGLE FONTS --}}
+    <!-- {{!-- GOOGLE FONTS --}} -->
     <link href="https://fonts.googleapis.com/css?family=Sen|Open+Sans|Spartan|Sacramento|&display=swap" rel="stylesheet">
 
-    {{!-- AOS --}}
+    <!-- {{!-- AOS --}} -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
-    {{!-- PRODUCT SANS --}}
+    <!-- {{!-- PRODUCT SANS --}} -->
     <link href="/public/fonts/ProductSans-Thin.ttf">
     <link href="/public/fonts/ProductSans-Light.ttf">
     <link href="/public/fonts/ProductSans-Regular.ttf">
@@ -40,20 +40,20 @@
 
     <main class="container-fluid" id="top">
 
-        {{!-- NAVBAR --}}
+        <!-- {{!-- NAVBAR --}} -->
         <div class="navbar-fixed grey navClass">
         <nav>
         <div class="nav-wrapper navcolor col-12-sm z-depth-3">
             <div class="container-fluid left-logo col-12">
 
-                {{!-- LOGO --}}
+                <!-- {{!-- LOGO --}} -->
                 
                 <a href="/" class="menu-link logo">
                     <img class="center logo" src="images/jc_logo_white.svg">
                 </a>
                 
 
-                {{!-- MOBILE MENU ICON --}}
+                <!-- {{!-- MOBILE MENU ICON --}} -->
                 <a href="#" data-target="mobile-side" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
             <ul class="right menu-items hide-on-med-and-down">
@@ -72,7 +72,7 @@
                     <i class="material-icons cart">account_box</i>
                 </a></li>
                 <li><a href="#modal-cart" class="modal-trigger menu-link cart">
-                    {{!-- CHANGE INNER HTML TO 'shopping_cart' IF CUSTOMER HAS ITEMS IN CART --}}
+                    <!-- {{!-- CHANGE INNER HTML TO 'shopping_cart' IF CUSTOMER HAS ITEMS IN CART --}} -->
                     <i class="material-icons cart">add_shopping_cart</i>
                 </a></li>
 
@@ -81,7 +81,7 @@
         </nav>
         </div>
 
-            {{!-- MOBILE MENU --}}
+            <!-- {{!-- MOBILE MENU --}} -->
             <ul class="sidenav" id="mobile-side"><br>
             <i class="material-icons">menu</i></a>
 
@@ -107,7 +107,7 @@
         </nav>
         </div>
         
-        {{!-- BODY --}}
+        <!-- {{!-- BODY --}} -->
 
         {{{body}}}
         
@@ -115,32 +115,8 @@
 
     <div id="modal-account" class="modal">
         <div class="isamember modal-content">
-            <h3 class="customer-login"><b>Login</b></h3>
-            <div class="col s12 formclass container row loginsignup z-depth-3">
-                <form class="row col s12 login-form">
-                    <div class="row input-field col s12">
-                        <label for="login-username">Username</label>
-                        <input id="login-username" type="text" class="validate">
-                    </div>
-                    <br>
-                    <div class="row input-field col s12">
-                        <label for="login-password">Password</label>
-                        <input id="login-password" type="text" class="validate">
-                    </div>
-                    <br>
-                    <a href="/members" class="submit waves-effect waves-light btn" id="login-account">
-                        LOG IN
-                    </a>
-                </form>
-            </div>
-            <br>
-            <div class="notamember">
-                <b>Not a member yet?</b>
-            </div>
-            <div class="row submitrow">
-                <a href="/signup" class="submit hit-subscribe waves-effect waves-light btn" id="signup-button">
-                    <b>CREATE ACCOUNT</b>
-                </a>
+            <div class="customer-login">
+                
             </div>
         </div>
     </div>
@@ -176,23 +152,38 @@
         <br><br>
     </div>
 
-    {{!-- JQUERY --}}
+    <!-- {{!-- JQUERY --}} -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    {{!-- MATERIALIZE JS --}}
+    <!-- {{!-- MATERIALIZE JS --}} -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-    {{!-- MATERIALIZE INIT --}}
+    <!-- {{!-- MATERIALIZE INIT --}} -->
     <script>M.AutoInit();</script>
 
     {{!-- AOS --}}
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    {{!-- AOS INIT  --}}
+    <!-- {{!-- AOS INIT  --}} -->
     <script>AOS.init();</script>
 
-    {{!-- MAIN JAVASCRIPT --}}
+    <!-- {{!-- MAIN JAVASCRIPT --}} -->
     <script type="text/javascript" src ="/js/index.js"></script>
+
+    <script>
+
+        var isLoggedIn = false;
+
+        if (isLoggedIn == true) {
+            $("div.customer-login").html('<h3><b>Login</b></h3><div class="col s12 formclass container row loginsignup z-depth-3"><form class="row col s12 login-form"><div class="row input-field col s12">    <input id="login-username" type="text" class="validate">    <label for="login-username">Username</label></div><br><div class="row input-field col s12">    <input id="login-password" type="text" class="validate">    <label for="login-password">Password</label></div><br><a href="/members" class="submit waves-effect waves-light btn" id="login-account">    LOG IN</a></form></div><br><div class="notamember">    <b>Not a member yet?</b></div><div class="row submitrow">    <a href="/signup" class="submit hit-subscribe waves-effect waves-light btn" id="signup-button"><b>CREATE ACCOUNT</b>    </a></div>'
+            )
+        }
+        else if (isLoggedIn == false) {
+            $("div.customer-login").html('<h3 class="h3profile"><b>Account Info</b></h3>     <div class="profile-details"><b>Logged in as {{username}}</b>    <br><br>    <div class="formclass accountinfo container row loginsignup">    <div class="profile-details">    <b>First Name</b><div class="btmsp">{{fname}}</div>    <b>Last Name</b><div class="btmsp">{{lname}}</div>    <b>Email</b><div class="btmsp">{{email}}</div>    <br>    <b>Subscription</b><br>{{s-staus}}    </div></div><br><div class="center"><button class="submit hit-subscribe waves-effect waves-light btn" id="log-off"><b>LOG OFF</b></button></div>   <br></div></div></div>')
+        }
+
+
+    </script>
 
 
 </body>

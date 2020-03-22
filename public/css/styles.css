@@ -131,7 +131,7 @@ a:hover {
   }
 
 .logo {
-    display: inline-block;
+    display: inline-block !important;
     height: 50px;
     margin-left: 10px;
 }
@@ -184,11 +184,13 @@ a:hover {
 
 .sFooter {
     margin-top: 30px !important;
+    font-size: 12px !important;
+    text-align: center !important;
 }
 
 .formclass {
     background-color: white;
-    padding: 30px;
+    padding: 10px !important;
     border-radius: 20px;
     border: 2px solid rgb(122, 122, 122);
 }
@@ -265,6 +267,10 @@ a:hover {
     text-align: left !important;
 }
 
+.smaller-text {
+    font-size: 12px;
+}
+
 .signup-form{
     margin: 30px !important;
 }
@@ -298,7 +304,7 @@ a:hover {
 
 .customer-login {
     color: #3b3e42;
-    margin-bottom: 50px !important;
+    margin-bottom: 30px !important;
 }
 
 .customer-cart {
@@ -375,7 +381,7 @@ a:hover {
 
 
 .rightalign {
-    text-align: right;
+    text-align: right !important;
     margin: 20px;
 }
 
@@ -388,6 +394,27 @@ a:hover {
     text-align: center !important;
 }
 
+.block {
+    display: block !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+    max-height: 200px;
+    width: auto;
+}
+
+.accountinfo {
+    padding: 30px !important;
+    text-align: center !important;
+    font-size: 18px;
+}
+
+.right {
+    text-align: right !important;
+}
+
+.btmsp {
+    margin-bottom: 10px;
+}
 
 
 /* iPad Styles */
@@ -438,6 +465,14 @@ a:hover {
 
     .huttese {
         text-align: left;
+    }
+
+    .profile-details {
+        font-size: 14px;
+    }
+
+    .h3profile {
+        font-size: 20px;
     }
 }
 
