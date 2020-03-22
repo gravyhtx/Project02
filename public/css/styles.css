@@ -190,7 +190,7 @@ a:hover {
 
 .formclass {
     background-color: white;
-    padding: 30px;
+    padding: 10px !important;
     border-radius: 20px;
     border: 2px solid rgb(122, 122, 122);
 }
@@ -304,7 +304,7 @@ a:hover {
 
 .customer-login {
     color: #3b3e42;
-    margin-bottom: 50px !important;
+    margin-bottom: 30px !important;
 }
 
 .customer-cart {
@@ -381,7 +381,7 @@ a:hover {
 
 
 .rightalign {
-    text-align: right;
+    text-align: right !important;
     margin: 20px;
 }
 
@@ -402,7 +402,19 @@ a:hover {
     width: auto;
 }
 
+.accountinfo {
+    padding: 30px !important;
+    text-align: center !important;
+    font-size: 18px;
+}
 
+.right {
+    text-align: right !important;
+}
+
+.btmsp {
+    margin-bottom: 10px;
+}
 
 
 /* iPad Styles */
@@ -453,6 +465,14 @@ a:hover {
 
     .huttese {
         text-align: left;
+    }
+
+    .profile-details {
+        font-size: 14px;
+    }
+
+    .h3profile {
+        font-size: 20px;
     }
 }
 

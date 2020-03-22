@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    
+    <title>Just Coffee</title>
+
+    <!-- {{!-- MAIN STYLE --}} -->
+    <link rel="stylesheet" href="../../public/css/styles.css">
+
+    <!-- {{!-- MATERIALIZE ICONS --}} -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- {{!-- MATERIALIZE CDN --}} -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- {{!-- Animate.CSS --}} -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+    <!-- {{!-- GOOGLE FONTS --}} -->
+    <link href="https://fonts.googleapis.com/css?family=Sen|Open+Sans|Spartan|Sacramento|&display=swap" rel="stylesheet">
+
+    <!-- {{!-- AOS --}} -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- {{!-- PRODUCT SANS --}} -->
+    <link href="/public/fonts/ProductSans-Thin.ttf">
+    <link href="/public/fonts/ProductSans-Light.ttf">
+    <link href="/public/fonts/ProductSans-Regular.ttf">
+    <link href="/public/fonts/ProductSans-Medium.ttf">
+    <link href="/public/fonts/ProductSans-Bold.ttf">
+
+</head>
+
+<body>
+
+    <main class="container-fluid" id="top">
+
+        <!-- {{!-- NAVBAR --}} -->
+        <div class="navbar-fixed grey navClass">
+        <nav>
+        <div class="nav-wrapper navcolor col-12-sm z-depth-3">
+            <div class="container-fluid left-logo col-12">
+
+                <!-- {{!-- LOGO --}} -->
+                
+                <a href="/" class="menu-link logo">
+                    <img class="center logo" src="images/jc_logo_white.svg">
+                </a>
+                
+
+                <!-- {{!-- MOBILE MENU ICON --}} -->
+                <a href="#" data-target="mobile-side" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+            <ul class="right menu-items hide-on-med-and-down">
+
+                </a></li>
+                <li><a href="#beans" class="menu-link beans">
+                    OUR BEANS
+                </a></li>
+                <li><a href="#mission" class="menu-link mission">
+                    OUR MISSION</a>
+                </li>
+                <li><a href="#footer" class="menu-link contact">
+                    CONTACT US
+                </a></li>
+                <li><a href="#modal-account" class="modal-trigger menu-link account">
+                    <i class="material-icons cart">account_box</i>
+                </a></li>
+                <li><a href="#modal-cart" class="modal-trigger menu-link cart">
+                    <!-- {{!-- CHANGE INNER HTML TO 'shopping_cart' IF CUSTOMER HAS ITEMS IN CART --}} -->
+                    <i class="material-icons cart">add_shopping_cart</i>
+                </a></li>
+
+            </ul>
+        </div>
+        </nav>
+        </div>
+
+            <!-- {{!-- MOBILE MENU --}} -->
+            <ul class="sidenav" id="mobile-side"><br>
+            <i class="material-icons">menu</i></a>
+
+                </a></li>
+                <li><a href="#beans" class="menu-link-side beans">
+                    OUR BEANS
+                </a></li>
+                <li><a href="#mission" class="menu-link-side mission">
+                    OUR MISSION</a>
+                </li>
+                <li><a href="#footer" class="menu-link-side contact">
+                    CONTACT US
+                </a></li>
+                <li><a href="#modal-account" class="modal-trigger menu-link-side account">
+                    ACCOUNT
+                </a></li>
+                <li><a href="#modal-cart" class="modal-trigger menu-link-side cart">
+                    CART
+                </a></li>
+
+            </ul>   
+        </div>
+        </nav>
+        </div>
+        
+        <!-- {{!-- BODY --}} -->
+
+        {{{body}}}
+        
+    </main>
+
+    <div id="modal-account" class="modal">
+        <div class="isamember modal-content">
+            <div class="customer-login">
+                
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-cart" class="modal">
+        <div class="modal-content">
+            <h3 class="customer-cart"><b>Cart</b></h3>
+            <hr>
+            <br><br>
+            <div class="kaffe">
+                Your cart is empty.
+                <br>
+                <span class="sm-cart">
+                    ( Why don't you check out some of our delicious products! )
+                </span>
+            </div>
+            <br><br>
+            <div class="row submitrow">
+                <button class="submit hit-subscribe waves-effect waves-light btn" id="cart-checkout">
+                    <b>CHECKOUT</b>
+                </button>
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <div class="sFooter gray" id="footer">
+        <br>
+
+        Made for you by Andy, Robin, and Ose.
+        <br><br>Copyright MMXX.
+
+        <br><br>
+    </div>
+
+    <!-- {{!-- JQUERY --}} -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- {{!-- MATERIALIZE JS --}} -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- {{!-- MATERIALIZE INIT --}} -->
+    <script>M.AutoInit();</script>
+
+    {{!-- AOS --}}
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- {{!-- AOS INIT  --}} -->
+    <script>AOS.init();</script>
+
+    <!-- {{!-- MAIN JAVASCRIPT --}} -->
+    <script type="text/javascript" src ="/js/index.js"></script>
+
+    <script>
+
+        var isLoggedIn = false;
+
+        if (isLoggedIn == true) {
+            $("div.customer-login").html('<h3><b>Login</b></h3><div class="col s12 formclass container row loginsignup z-depth-3"><form class="row col s12 login-form"><div class="row input-field col s12">    <input id="login-username" type="text" class="validate">    <label for="login-username">Username</label></div><br><div class="row input-field col s12">    <input id="login-password" type="text" class="validate">    <label for="login-password">Password</label></div><br><a href="/members" class="submit waves-effect waves-light btn" id="login-account">    LOG IN</a></form></div><br><div class="notamember">    <b>Not a member yet?</b></div><div class="row submitrow">    <a href="/signup" class="submit hit-subscribe waves-effect waves-light btn" id="signup-button"><b>CREATE ACCOUNT</b>    </a></div>'
+            )
+        }
+        else if (isLoggedIn == false) {
+            $("div.customer-login").html('<h3 class="h3profile"><b>Account Info</b></h3>     <div class="profile-details"><b>Logged in as {{username}}</b>    <br><br>    <div class="formclass accountinfo container row loginsignup">    <div class="profile-details">    <b>First Name</b><div class="btmsp">{{fname}}</div>    <b>Last Name</b><div class="btmsp">{{lname}}</div>    <b>Email</b><div class="btmsp">{{email}}</div>    <br>    <b>Subscription</b><br>{{s-staus}}    </div></div><br><div class="center"><button class="submit hit-subscribe waves-effect waves-light btn" id="log-off"><b>LOG OFF</b></button></div>   <br></div></div></div>')
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>
