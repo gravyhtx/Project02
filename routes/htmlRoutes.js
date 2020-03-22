@@ -8,11 +8,6 @@ module.exports = function(app) {
     // res.sendFile(path.join(__dirname, "../public/index.html"));
   });
 
-  //Returns the user if they are not logged in
-  app.get("/", isAuthenticated, (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/index.html"));
-  });
-
   app.get("/signup", function(req, res) {
     res.render("signup");
   });

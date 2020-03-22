@@ -3,14 +3,13 @@ var passport = require("../config/passport");
 
 module.exports = function(app) {
   // Route which allow user to view all coffee within the database
-  app.get("/api/coffee", function (req, res)  {
-    db.Coffee.findAll({}).then(function (dbcoffee)  {
+  app.get("/api/coffee", function(req, res) {
+    db.Coffee.findAll({}).then(function(dbcoffee) {
       res.json(dbcoffee);
     });
   });
 
-
-  // Search for Specific roast of all of the roasts within the database 
+  // Search for Specific roast of all of the roasts within the database
   app.get("/api/:coffee?", function(req, res) {
     if (req.params.id) {
       // Display the JSON for that specific roast
@@ -33,6 +32,11 @@ module.exports = function(app) {
     req.logout();
     res.redirect("/");
   });
+
+  app.post("/api/login", passport.authenticate("local"), function(req, res){
+    res.json(req.user);
+  });
+
   //Route which allows user to sign into website
   app.post("/api/signup", function(req, res) {
     db.User.create({
@@ -49,7 +53,8 @@ module.exports = function(app) {
       state: req.body.state
     })
       .then(function(data) {
-        res.json(data);
+        // res.json(data);
+        res.redirect(307, "/api/login");
         console.log(res.json(data.user));
       })
       .catch(function(err) {
@@ -58,6 +63,14 @@ module.exports = function(app) {
       });
   });
 
+  app.get("/api/user_data", function(req, res){
+    if (!req.user){res.json({});}
+    else {
+      res.json({
+        username:
+      });
+    }
+  });
 
   // app.post("/api/coffee", function(req, res)  {
   //   db.Coffee.create(req.body).then(function(dbcoffee) {
@@ -66,7 +79,7 @@ module.exports = function(app) {
   // });
 
   // Route which removes coffee from the database
-  app.delete("/api/coffee/:id", (req, res) =>{
+  app.delete("/api/coffee/:id", (req, res) => {
     db.Coffee.destroy({ where: { id: req.params.id } }).then((dbcoffee) =>{
       res.json(dbcoffee);
     });
