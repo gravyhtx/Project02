@@ -6,5 +6,5 @@ if (req.user) {
   }
 
   // Redirect user from accessing restricted page if not logged in.
-  return res.redirect("/");
+  return res.redirect("404");
 };
