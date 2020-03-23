@@ -7,6 +7,10 @@ module.exports = function(app) {
     res.render("index");
   });
 
+  app.get("/subscribe", (req, res) => {
+    res.render("subscribe");
+  });
+
   app.get("/signup", function(req, res) {
     if (req.user) {
       res.redirect("/members");

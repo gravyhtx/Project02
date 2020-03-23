@@ -34,6 +34,16 @@ module.exports = function(app) {
     res.redirect("/");
   });
 
+  app.get("/api/user_data", function(req, res) {
+
+    if (!req.user) {
+      res.json({});
+    }
+    else {
+      res.json(req.user);
+    }
+  });
+
   app.post("/api/login", passport.authenticate("local"), function(req, res) {
     res.json(req.user);
   });
@@ -56,7 +66,7 @@ module.exports = function(app) {
       .then(function(data) {
         // res.json(data);
         res.redirect(307, "/api/login");
-        console.log(res.json(data.user));
+        // console.log(res.json(data.user));
       })
       .catch(function(err) {
         console.log(err);

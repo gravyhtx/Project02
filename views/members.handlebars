@@ -3,14 +3,17 @@
     <div class="row">
 
         <div class="col s5">
-            <b>Logged in as {{user.username}}</b>
+            <b>Logged in as {{user.username}}<span class="member-username"></span></b>
             <br><br>
             <div class="profile-details">
-                First Name: {{user.first_name}}
+                First Name: {{user.first_name}}<span class="member-firstName"></span>
                 <br>
-                Last Name: {{user.last_name}}
+                Last Name: {{user.last_name}}<span class="member-lastName"></span>
                 <br><br>
-                Subscription: {{user.s-staus}}
+                <br>
+                email: {{user.last_name}}<span class="member-email"></span>
+                <br><br>
+                Subscription: {{user.s-staus}}<span class="member-subscription"></span>
                 <br><br>
                 <a href="#">Update Settings</a>
                 <br>
