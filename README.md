@@ -46,8 +46,9 @@ Any business that would like to offer subscriptions to potential and existing cu
 
 ## Contributors:
 
-[![Profile Badge](https://img.shields.io/badge/User-Profile-red.svg)](https://github.com/gravyhtx "Andrew Richard")
-[![Profile Badge](https://img.shields.io/badge/User-Profile-red.svg)](https://github.com/Ghalileo "Ose Okogbo")
+https://github.com/gravyhtx
+
+https://github.com/Ghalileo
 
 ## Licensing:
 ***
